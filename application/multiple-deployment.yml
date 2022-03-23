@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whalesay-01
+  labels:
+    app: whalesay-01
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: whalesay-01
+  template:
+    metadata:
+      labels:
+        app: whalesay-01
+    spec:
+      containers:
+      - name: whalesay-01
+        image: docker/whalesay
+        imagePullPolicy: "IfNotPresent"
+        command: ["cowsay","Hello!! I'm whalesay-01"]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whalesay-02
+  labels:
+    app: whalesay-02
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: whalesay-02
+  template:
+    metadata:
+      labels:
+        app: whalesay-02
+    spec:
+      containers:
+      - name: whalesay-02
+        image: docker/whalesay
+        imagePullPolicy: "IfNotPresent"
+        command: ["cowsay","Hello!! I'm whalesay-02"]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whalesay-03
+  labels:
+    app: whalesay-03
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: whalesay-03
+  template:
+    metadata:
+      labels:
+        app: whalesay-03
+    spec:
+      containers:
+      - name: whalesay-03
+        image: docker/whalesay
+        imagePullPolicy: "IfNotPresent"
+        command: ["cowsay","Hello!! I'm whalesay-03"]
