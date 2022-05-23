@@ -52,4 +52,4 @@ spec:
     image: docker/whalesay
     imagePullPolicy: "IfNotPresent"
     command: ["cowsay","Hello!! I'm whalesay-05"]
----
+
