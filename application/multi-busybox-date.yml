@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-date
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    args:
+    - date
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-date-2
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    args:
+    - date
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-date-3
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    args:
+    - date
