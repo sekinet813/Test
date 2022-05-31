@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: t-5
+spec:
+  containers:
+  - name: t-5
+    image: busybox
+    command: ["sleep" , "360000"]
+  nodeName: gke-cluster-2-pool-1-ab6fe04d-3mn9
